@@ -1,0 +1,307 @@
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">Registre Agent Administratif</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i
+                            class="fa fa-angle-right"></i>
+                    </li>
+                    <li><a class="parent-item" href="#">Agent Administratif</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">Agent Administratif</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card card-box">
+                    <div class="card-head">
+                        <header>Basic Information</header>
+                        <button id="panel-button" class="mdl-button mdl-js-button mdl-button--icon pull-right"
+                            data-upgraded=",MaterialButton">
+                            <i class="material-icons">more_vert</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            data-mdl-for="panel-button">
+                            <li class="mdl-menu__item"><i class="material-icons">assistant_photo</i>Action
+                            </li>
+                            <li class="mdl-menu__item"><i class="material-icons">print</i>Another action
+                            </li>
+                            <li class="mdl-menu__item"><i class="material-icons">favorite</i>Something else
+                                here</li>
+                        </ul>
+                    </div>
+                    <div class="card-body" id="bar-parent">
+                        <form class="form-horizontal" [formGroup]="agentForm" (ngSubmit)="onSubmit()">
+                            <div class="form-body">
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Prenom
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="text" name="firstname" formControlName="firstName"
+                                            placeholder="enter Prenom" class="form-control input-height" />
+                                    </div>
+                                </div>
+                                <div *ngIf="agentForm.get('firstName').invalid && agentForm.get('firstName').touched">
+                                    <div *ngIf="agentForm.get('firstName').errors.required">
+                                        FirstName is required
+                                    </div>
+                                    <div *ngIf="agentForm.get('firstName').errors.minlength">
+                                        FirstName is must have at leats 3 chars
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Nom
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="text" name="lastname" formControlName="lastname"
+                                            placeholder="enter Nom" class="form-control input-height" />
+                                    </div>
+
+                                    <div *ngIf="agentForm.get('lastname').invalid && agentForm.get('lastname').touched">
+                                        <div *ngIf="agentForm.get('lastname').errors.required">
+                                            lastname is required
+                                        </div>
+                                        <div *ngIf="agentForm.get('lastname').errors.minlength">
+                                            lastname is must have at leats 5 chars
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Cin
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input name="number" type="text" formControlName="cin" placeholder="Cin"
+                                            class="form-control input-height" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Email
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <input type="text" class="form-control input-height" formControlName="email"
+                                                name="email" placeholder=" Addresse Email">
+                                        </div>
+                                    </div>
+
+
+                                    <div *ngIf="agentForm.get('email').invalid && agentForm.get('email').touched">
+                                        <div *ngIf="agentForm.get('email').errors.required">
+                                            email is required
+                                        </div>
+                                        <div *ngIf="agentForm.get('email').errors.email">
+                                            email is not valid
+                                        </div>
+                                        <!-- <div *ngIf="agentForm.get('email').errors.pattern">
+                                            email is not valid
+                                        </div> -->
+                                        <span class="text text-danger"></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Role
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <select class="form-select input-height" name="role">
+                                            <option value="">Select...</option>
+                                            <!-- <option *ngFor="let item of R" selected [value]="item.role">
+                                                {{item.role}}
+                                            </option> -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3"> Date inscription
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-append date">
+                                            <div id="dateIcon" class="input-group datePicker">
+                                                <input class="formDatePicker form-control" type="text"
+                                                    placeholder="Select Date.." data-input formControlName="date"
+                                                    name="date">
+                                                <span class="dateBtn">
+                                                    <a class="input-button" title="toggle" data-toggle>
+                                                        <i class="icon-calendar"></i>
+                                                    </a>
+                                                    <a class="input-button" title="clear" data-clear>
+                                                        <i class="icon-close"></i>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Mot de Passe
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="password" name="pwd" data-required="1"
+                                            placeholder="entrer mot de passe" formControlName="pwd"
+                                            class="form-control input-height" />
+                                    </div>
+
+                                    <div *ngIf="agentForm.get('pwd').invalid && agentForm.get('pwd').touched">
+                                        <div *ngIf="agentForm.get('pwd').errors.required">
+                                            password is required
+                                        </div>
+                                        <div *ngIf="agentForm.get('pwd').errors.minlength">
+                                            password is must have at leats 3 chars
+                                        </div>
+                                        <div *ngIf="agentForm.get('pwd').errors.maxlength">
+                                            paasword is must have at leats 12 chars
+                                        </div>
+                                        <div *ngIf="agentForm.get('pwd').errors.pattern">
+                                            paasword is not valid
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Confirme Mot de Passe
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="text" name="ConfirmePwd" formControlName="ConfirmePwd"
+                                            data-required="1" placeholder="Entrez à nouveau votre mot de passe"
+                                            class="form-control input-height" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">genre
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <select class="form-select input-height" name="genre" formControlName="genre">
+                                            <option value="">Select...</option>
+                                            <option value="Homme">Homme</option>
+                                            <option value="Femme">Femme</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Diplome
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="text" name="designation" formControlName="diplome"
+                                            data-required="1" placeholder="entrer diplome"
+                                            class="form-control input-height" />
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">emploi
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <textarea name="address" placeholder="address" formControlName="emploi"
+                                            class="form-control-textarea" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Telephone
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input name="number" type="text" formControlName="telephone"
+                                            placeholder="numero de telephone" class="form-control input-height" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Salaire
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input name="number" type="text" formControlName="salaire" placeholder="salaire"
+                                            class="form-control input-height" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Date de Naisssance
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-append date">
+                                            <div id="dateIcon2" class="input-group datePicker">
+                                                <input class="formDatePicker form-control" formControlName="naissance"
+                                                    name="naissance" type="text" placeholder="Select Date.." data-input>
+                                                <span class="dateBtn">
+                                                    <a class="input-button" title="toggle" data-toggle>
+                                                        <i class="icon-calendar"></i>
+                                                    </a>
+                                                    <a class="input-button" title="clear" data-clear>
+                                                        <i class="icon-close"></i>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3">Adresse
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <textarea name="address" placeholder="address" formControlName="adresse"
+                                            class="form-control-textarea" rows="5"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="form-group row">
+                                    <label class="control-label col-md-3"> photo de Profile
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="file" class="default" (click)="filepicker.click()">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group" style="visibility: hidden ;">
+                                    <input type="file" class="form-control" #filepicker
+                                        (change)='onImageSelected($event)' placeholder="fichier" />
+                                </div>
+                                <div style="margin-bottom: 120px ;">
+                                    <img [src]="imagePreview" style="width:200px ; height:200px" *ngIf="imagePreview"
+                                        alt="Avatar">
+                                </div> -->
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="offset-md-3 col-md-9">
+                                            <button type="button"
+                                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Submit</button>
+                                            <button type="button"
+                                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

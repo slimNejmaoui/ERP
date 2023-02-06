@@ -1,0 +1,311 @@
+<div class="sidebar-container">
+    <div class="sidemenu-container navbar-collapse collapse fixed-menu">
+        <div id="remove-scroll" class="left-sidemenu">
+            <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true"
+                data-slide-speed="200" style="padding-top: 20px">
+
+                <li class="sidebar-toggler-wrapper hide">
+                    <div class="sidebar-toggler">
+                        <span></span>
+                    </div>
+                </li>
+
+                <li class="sidebar-user-panel">
+                    <div class="sidebar-user">
+                        <div class="sidebar-user-picture">
+                            <img alt="image" src="assets/img/dp.jpg">
+                        </div>
+                        <div class="sidebar-user-details">
+                            <div class="user-name">Sneha Patel</div>
+                            <div class="user-role">Administrator</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item active">
+                    <a routerLink="/auth/login" class="nav-link nav-toggle"> <i data-feather="home"></i>
+                        <span class="title">Home</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <li class="nav-item start active open">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i data-feather="airplay"></i>
+                        <span class="title">Dashboard Admin</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item active">
+                            <a routerLink="/dashboard/dashboradAdmin" class="nav-link ">
+                                <span class="title">Enseignant 1</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a routerLink="/dashboard/adminEtudiant" class="nav-link ">
+                                <span class="title">Etudiants </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/dashboard/adminStaff" class="nav-link ">
+                                <span class="title">Agent Adminstratif </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item start active open">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i data-feather="airplay"></i>
+                        <span class="title">Dashboard</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item active">
+                            <a routerLink="dashboard/Enseignant" class="nav-link ">
+                                <span class="title">Enseignant </span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item start active open">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i data-feather="users"></i>
+                        <span class="title">Registre</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item active">
+                            <a routerLink="/admin/registreEnseignant" class="nav-link ">
+                                <span class="title">Registre Enseignant</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a routerLink="/admin/registreEleve" class="nav-link ">
+                                <span class="title"> Registre Eleve </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/admin/registreParent" class="nav-link ">
+                                <span class="title">Registre Parent </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/admin/registreStaf" class="nav-link ">
+                                <span class="title">Registre Agent </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item start active open">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i data-feather="users"></i>
+                        <span class="title">Registre</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+
+                        <li class="nav-item ">
+                            <a routerLink="/core/test" class="nav-link ">
+                                <span class="title"> Registre Eleve </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="user/registreParent" class="nav-link ">
+                                <span class="title">Registre Parent </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="briefcase"></i>
+                        <span class="title">Programme</span> <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a routerLink="niveau/Niveau" class="nav-link "> <span class="title">Add
+                                    Niveau</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a routerLink="classe/Classe" class="nav-link "> <span class="title">Add
+                                    classe
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="Matiere" class="nav-link "> <span class="title">Add
+                                    Matiere</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="role/Role" class="nav-link "> <span class="title">Add
+                                    Role</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li class="nav-item active">
+                    <a routerLink="administration/emploiEnseignant" class="nav-link nav-toggle"> <i
+                            data-feather="calendar"></i>
+                        <span class="title">Emlpoi</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+
+
+
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="book"></i>
+                        <span class="title">Courses</span> <span class="arrow"></span>
+                        <span class="label label-rouded label-menu label-success">new</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="all_courses.html" class="nav-link "> <span class="title">All
+                                    Courses</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="add_course_bootstrap.html" class="nav-link "> <span class="title">Add
+                                    Course Bootstrap</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="edit_course.html" class="nav-link "> <span class="title">Edit
+                                    Course</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="course_details.html" class="nav-link "> <span class="title">About
+                                    Course</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="book-open"></i>
+                        <span class="title">Library</span> <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="all_assets.html" class="nav-link "> <span class="title">All Library
+                                    Assets</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="add_library.html" class="nav-link "> <span class="title">Add Library
+                                    Asset</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="add_library_bootstrap.html" class="nav-link "> <span class="title">Add
+                                    Asset Bootstrap</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="edit_library.html" class="nav-link "> <span class="title">Edit
+                                    Asset</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="briefcase"></i>
+                        <span class="title">Departments</span> <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="all_department.html" class="nav-link "> <span class="title">All
+                                    Departments</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="add_department_bootstrap.html" class="nav-link "> <span class="title">Add
+                                    Department
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="edit_department.html" class="nav-link "> <span class="title">Edit
+                                    Department</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle">
+                        <i data-feather="mail"></i>
+                        <span class="title">Email</span>
+                        <span class="arrow"></span>
+                        <span class="label label-rouded label-menu label-danger">new</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="email_inbox.html" class="nav-link ">
+                                <span class="title">Inbox</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="email_view.html" class="nav-link ">
+                                <span class="title">View Mail</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="email_compose.html" class="nav-link ">
+                                <span class="title">Compose Mail</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-toggle"> <i data-feather="dollar-sign"></i>
+                        <span class="title">Fees</span> <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="fees_collection.html" class="nav-link "> <span class="title">Fees
+                                    Collection</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="add_fees.html" class="nav-link "> <span class="title">Add Fees </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="add_fees_bootstrap.html" class="nav-link "> <span class="title">Add
+                                    Fees Bootstrap</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="fees_receipt.html" class="nav-link "> <span class="title">Fee
+                                    Receipt</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
